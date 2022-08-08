@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>授業登録</title>
+    <!-- 文字コード指定 -->
+    <meta http-equiv="content-type" charset="utf-8">
+    <!-- Googleで推奨されてる基本的なviewportの設定方法 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/post.css">
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <span>
+      <h2>時間割登録</h2>
+      <form action="../cgi-bin/post.py" method="post">
+        <div class="input1">
+          <label class="input2" for="studentNumber">
+            <input placeholder="学籍番号" name="studentNumber" id="studentNumber" type="text" required />
+          </label>
+        </div>
+        <div class="input1">
+          <label  class="input2" for="lessonName">
+            <input placeholder="授業名" name="lessonName" id="lessonName" type="text" required />
+          </label>
+        </div>
+        <div class="cp_ipselect cp_sl01">
+          <label for="dayOfWeek">
+            <select name="dayOfWeek" id="dayOfWeek" required>
+              <option value="" hidden>曜日</option>
+              <option value="月">月</option>
+              <option value="火">火</option>
+              <option value="水">水</option>
+              <option value="木">木</option>
+              <option value="金">金</option>
+            </select>
+          </label>
+        </div>
+        <div class="cp_ipselect cp_sl01">
+          <label for="lesson">
+            <select name="lesson" id="lesson" required>
+              <option value="" hidden>コマ</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+        </div>
+        <div  class="button1">
+           <button onClick="comp()">登録</button>
+        </div>
+      </form>
+      <hr />
+      <div class="button2">
+        <a href="../index.html">確認画面</a>
+      </div>
+    </span>
+  </body>
+</html>
+<script src="../canvas.js"></script>
